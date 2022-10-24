@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <section className='container'>
+    <section className='estilo_principal'>
     <RouterProvider router={router} />
 
     </section>
