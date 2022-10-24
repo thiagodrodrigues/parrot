@@ -8,7 +8,7 @@ const NavBar = (props: NavProps) => {
   return (
       <Nav className="d-flex justify-content-between align-items-center">
         <Logo to='/'>
-          <img src={logo} alt="desenho da marca" />
+          <img src={logo} alt="desenho da marca"/>
         </Logo>
         <Menu>
           Olá usuário | <Link to='#'>sair</Link>
