@@ -7,7 +7,7 @@ const Home = (props: HomeProps) => {
   return (
     <div>
       <NavBar />
-      <h1>Home</h1>
+      
       <NewPost/>
     </div>
   )

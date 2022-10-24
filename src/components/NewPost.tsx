@@ -11,7 +11,7 @@ const NewPost = (props: NewPostProps) => {
         <PostForm className='d-flex flex-column col-lg-10 col-md-10 col-sm-10 col-9'>
          <label htmlFor="post"></label>
          <textarea name='post'/>
-         <input type="submit" />
+         <input type="submit" value='publicar'/>
         </PostForm>
 
     </CreatePost>
