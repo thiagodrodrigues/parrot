@@ -17,8 +17,9 @@ export const CreatePost = styled.div`
 
 export const PostForm = styled.form`
   textarea{
-    min-width: 100vh;
+
     min-height: 70px;
     resize: none;
+   
   }
 `
