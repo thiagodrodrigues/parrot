@@ -11,8 +11,9 @@ border-color: #C5C5C5;
   margin: 0 auto;
 
   img{
-    max-height: 17vh;
-    max-width: 23vh;
+    max-width: 100px;
+    max-height: 70px;
+
 
   }
 
