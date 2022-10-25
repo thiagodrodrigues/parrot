@@ -20,7 +20,7 @@ const UserDetails = (props: UserDetailsProps) => {
             <h1>{props.nome}</h1>
             <p>{props.ap}</p>
             <p>{props.email}</p>
-            <p>{props.posts} publicações</p>
+            <p><pre>{props.posts}</pre> {props.posts > 1 ? "publicações" : "publicação"}</p>
           </Data>
         </div>
         {/* botão de editar que deve aparecer somente pro usuário logado*/}
