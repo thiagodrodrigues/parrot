@@ -13,7 +13,7 @@ border-color: #C5C5C5;
   img{
     max-width: 100px;
     max-height: 70px;
-
+    padding-left: 20px
 
   }
 
