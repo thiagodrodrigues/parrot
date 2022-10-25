@@ -41,7 +41,7 @@ export const PostDetail = styled.div`
   img{
     max-width: 100px;
     max-height: 70px;
-
+    padding-left: 25px
 
   }
 

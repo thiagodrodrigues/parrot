@@ -19,30 +19,38 @@ max-width: 700px;
 
   }
 
-  p{
+  h1{
+    margin-left: 0;
+    padding-top: 43px;
+    font-family: 'Questrial';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: #919191;
-    margin-left: 0;
-    margin-top: 8px;
+    font-size: 24px;
+    line-height: 25px;
+    color: #76BB4C;
   }
 
-  p.post{
-    margin: 8px 0 30px 0;
+  p{
+    margin-left: 0;
+    font-family: 'Questrial';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
     color: #000000;
+
   }
+
+
 
   img{
     max-width: 100px;
     max-height: 70px;
-
+    padding-left: 25px;
 
   }
+
+`
+export const Data = styled.div`
 
 `
