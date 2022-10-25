@@ -1,19 +1,19 @@
     {
-      "vizinhanca" : [
+      "vizinhos" : [
       {
         "id": 1,
-        "nome":"vini",
-        "ap": 311,
+        "nome":"Rafa",
+        "ap": 310,
         "timestamp":"10/06/2022 09:00",
         "post": "Jeffrey Dahmer tá um saco matando gente aqui do lado"
 
       },
       {
         "id": 2,
-        "nome":"vini",
-        "ap": 311,
+        "nome":"Lucas",
+        "ap": 501,
         "timestamp":"10/06/2022 09:00",
-        "post": "Jeffrey Dahmer tá um saco matando gente aqui do lado"
+        "post": "Quando será servido o bolo com café?"
 
       },
       {
