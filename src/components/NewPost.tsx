@@ -4,6 +4,10 @@ import avatar from '../assets/avatar.png'
 type NewPostProps = {}
 
 const NewPost = (props: NewPostProps) => {
+
+
+
+
   return (
     <CreatePost className='row'>
       <img src={avatar} alt="foto de avatar" className='col-lg-2 col-md-2 col-sm-2 col-3' />
