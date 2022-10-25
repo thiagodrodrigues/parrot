@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar"
 import NewPost from "../components/NewPost"
+// arquivo json só para testes:
 import faker from '../assets/faker.json'
 import Post from "../components/Post"
 
