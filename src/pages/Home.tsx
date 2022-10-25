@@ -12,11 +12,11 @@ const Home = (props: HomeProps) => {
 
   return (
     <div>
+      {/* //componente do navbar */}
       <NavBar />
-
+      {/* //componente de criação de post */}
       <NewPost/>
-      <Post id={1} nome="Jeffrey" ap={231} timestamp="10/06/2022 09:00" post="Poxa galera, vamos respeitar o horário de silêncio!
-      Tinha alguém usando furadeira 2 HORAS DA MANHÃ!!! ó_ó" />
+      {/* //componente para mostrar o feed de posts */}
       {vizinhos.map((vizinho)=>(
         <Post key={vizinho.id} id={vizinho.id} nome={vizinho.nome} ap={vizinho.ap} timestamp={vizinho.timestamp} post={vizinho.post}/>
       ))}
