@@ -28,6 +28,8 @@ export const PostForm = styled.form`
     resize: none;
     border: 1px solid #8BC34A;
     border-radius: 10px;
+    overflow: auto;
+    outline: none;
 
   }
   input{
