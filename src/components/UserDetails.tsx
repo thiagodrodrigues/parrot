@@ -1,5 +1,4 @@
-import { UserDetail, Data } from './UserDetails.style'
-import { Link } from 'react-router-dom';
+import { UserDetail, Data, EditProfile } from './UserDetails.style'
 import avatar from "../assets/avatar.png";
 
 type UserDetailsProps = {
@@ -13,10 +12,10 @@ type UserDetailsProps = {
 const UserDetails = (props: UserDetailsProps) => {
   return (
     <UserDetail>
-      <div>
-        <div className="row align-items-center">
-          <img src={avatar} alt="foto de perfil" className=' col-lg-2 col-md-2 col-sm-2 col-3' />
-          <Data className='d-flex flex-column col-lg-10 col-md-10 col-sm-10 col-9 '>
+      <div className='editar_perfil d-flex justify-content-between'>
+        <div className="row align-items-center ">
+          <img src={avatar} alt="foto de perfil" className=' col-lg-6 col-md-6 col-sm-6 col-6' />
+          <Data className='d-flex flex-column col-lg-6 col-md-6 col-sm-6 col-6 '>
             <h1>{props.nome}</h1>
             <p>{props.ap}</p>
             <p>{props.email}</p>
@@ -24,6 +23,11 @@ const UserDetails = (props: UserDetailsProps) => {
           </Data>
         </div>
         {/* botão de editar que deve aparecer somente pro usuário logado*/}
+        <div>
+          <EditProfile to={`/edit/${props.id}`}>
+            <p>editar perfil</p>
+          </EditProfile>
+        </div>
       </div>
     </UserDetail>
   )

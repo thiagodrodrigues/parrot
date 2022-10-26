@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const UserDetail = styled.div`
 
-max-width: 700px;
+  max-width: 700px;
   border: 1px solid rgba(197, 197, 197, 1);
   border-width: 0px 1px 1px 1px;
   min-height: 135px;
@@ -46,16 +47,21 @@ max-width: 700px;
 
 
   img{
-    max-width: 100px;
+     max-width: 100px;
     max-height: 70px;
     padding: 0 0 0 35px ;
 
 
+
+  }
+
+  .editar_perfil{
+    margin: 0;
   }
 
 `
 export const Data = styled.div`
-  padding-left: 20px;
+
 
   pre{
     color: #6033AA;
@@ -67,4 +73,19 @@ export const Data = styled.div`
     line-height: 16px;
 
   }
+`
+export const EditProfile = styled(Link)`
+    margin: 0;
+    display: block;
+  p{
+    text-transform: lowercase;
+    background: #76BB4C;
+    border-radius: 30px;
+
+    color: #FFFFFF;
+    padding: 8px 24px;
+
+
+  }
+
 `
