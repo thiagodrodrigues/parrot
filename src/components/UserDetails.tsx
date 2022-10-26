@@ -4,7 +4,7 @@ import avatar from "../assets/avatar.png";
 type UserDetailsProps = {
   id: number,
   nome: string,
-  ap: number,
+  apartment: number,
   email: string,
   posts: number
 }
@@ -17,7 +17,7 @@ const UserDetails = (props: UserDetailsProps) => {
           <img src={avatar} alt="foto de perfil" className=' col-lg-6 col-md-6 col-sm-6 col-6' />
           <Data className='d-flex flex-column col-lg-6 col-md-6 col-sm-6 col-6 '>
             <h1>{props.nome}</h1>
-            <p>{props.ap}</p>
+            <p>{props.apartment}</p>
             <p>{props.email}</p>
             <p><pre>{props.posts}</pre> {props.posts > 1 ? "publicações" : "publicação"}</p>
           </Data>
