@@ -33,14 +33,14 @@ const Profile = (props: ProfileProps) => {
     <>
       <NavBar />
 
-      <UserDetails nome={data.nome} ap={data.ap} email={data.email} id={Number(id)} posts={soma} />
+      <UserDetails nome={data.nome} apartment={data.apartment} email={data.email} id={Number(id)} posts={soma} />
 
       {/* Caso o número de posts for maior do que zero rá renderizar todos os posts. Se for 0 irá renderizar o componente de NoPost*/}
 
       {soma > 0 ? (
           <>
             {usuarios.map((usuario) => (
-            <Post key={id} id={Number(id)} nome={usuario.nome} timestamp={usuario.timestamp} ap={usuario.ap} post={usuario.post} />))}
+            <Post key={id} id={Number(id)} nome={usuario.nome} timestamp={usuario.timestamp} apartment={usuario.apartment} post={usuario.post} />))}
           </>
         ) :
            <>

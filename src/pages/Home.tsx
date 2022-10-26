@@ -19,7 +19,7 @@ const Home = (props: HomeProps) => {
       <NewPost/>
       {/* //componente para mostrar o feed de posts */}
       {vizinhos.map((vizinho)=>(
-        <Post key={vizinho.id} id={vizinho.id} nome={vizinho.nome} ap={vizinho.ap} timestamp={vizinho.timestamp} post={vizinho.post}/>
+        <Post key={vizinho.id} id={vizinho.id} nome={vizinho.nome} apartment={vizinho.apartment} timestamp={vizinho.timestamp} post={vizinho.post}/>
       ))}
     </div>
   )
