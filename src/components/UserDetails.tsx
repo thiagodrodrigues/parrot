@@ -23,7 +23,7 @@ const UserDetails = (props: UserDetailsProps) => {
           </Data>
         </div>
         {/* botão de editar que deve aparecer somente pro usuário logado*/}
-        <div>
+        <div className='botao_editar'>
           <EditProfile to={`/edit/${props.id}`}>
             <p>editar perfil</p>
           </EditProfile>

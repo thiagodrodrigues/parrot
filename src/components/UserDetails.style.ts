@@ -59,6 +59,10 @@ export const UserDetail = styled.div`
     margin: 0;
   }
 
+  .botao_editar{
+    margin: 0;
+  }
+
 `
 export const Data = styled.div`
 
@@ -81,7 +85,8 @@ export const EditProfile = styled(Link)`
     text-transform: lowercase;
     background: #76BB4C;
     border-radius: 30px;
-
+    margin-right: 4rem;
+    margin-top: 2.4rem;
     color: #FFFFFF;
     padding: 8px 24px;
 
