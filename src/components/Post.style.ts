@@ -5,6 +5,7 @@ export const PostDetail = styled.div`
   max-width: 700px;
   border: 1px solid rgba(197, 197, 197, 1);
   min-height: 135px;
+  border-width: 0px 1px 1px 1px;
 
   a{
     margin-left: 0;
