@@ -10,7 +10,12 @@ const router = createBrowserRouter([
   {
     path: '/:id',
     element: <Profile />
+  },
+  {
+    path: '/edit/:id',
+    // element: <página de editar perfil aqui>
   }
+
 
 ]);
 export default router

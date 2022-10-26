@@ -5,6 +5,7 @@ import UserDetails from "../components/UserDetails";
 // arquivo json só para testes:
 import faker from '../assets/faker.json'
 import { mapToStyles } from "@popperjs/core/lib/modifiers/computeStyles";
+import NoPost from "../components/NoPost";
 
 
 type ProfileProps = {}
@@ -31,11 +32,21 @@ const Profile = (props: ProfileProps) => {
   return (
     <>
       <NavBar />
-      <UserDetails nome={data.nome} ap={data.ap} email={data.email} id={Number(id)} posts={soma} />
-      {usuarios.map((usuario) => (
-        <Post key={id} id={Number(id)} nome={usuario.nome} timestamp={usuario.timestamp} ap={usuario.ap} post={usuario.post} />
-      ))}
 
+      <UserDetails nome={data.nome} ap={data.ap} email={data.email} id={Number(id)} posts={soma} />
+
+      {/* Caso o número de posts for maior do que zero rá renderizar todos os posts. Se for 0 irá renderizar o componente de NoPost*/}
+
+      {soma > 0 ? (
+          <>
+            {usuarios.map((usuario) => (
+            <Post key={id} id={Number(id)} nome={usuario.nome} timestamp={usuario.timestamp} ap={usuario.ap} post={usuario.post} />))}
+          </>
+        ) :
+           <>
+            <NoPost/>
+           </>
+      }
     </>
   )
 }
