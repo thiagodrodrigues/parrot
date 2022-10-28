@@ -12,15 +12,9 @@ const Home = (props: HomeProps) => {
 
   const { vizinhos } = faker
   const [posts, setPosts] = useState([])
-  const [users, setUsers] = useState([])
-  const [teste, setTeste] = useState([])
 
-  //pegar os usuarios vindo do backend
-  async function getUsers() {
-    const { data } = await api.get('/perfil')
 
-    setUsers(data)
-  }
+
 
   //pegar os posts vindo do backend
   async function getPosts() {
@@ -32,7 +26,7 @@ const Home = (props: HomeProps) => {
   useEffect(() => {
 
     getPosts()
-    getUsers()
+    
 
   }, [])
 
@@ -44,8 +38,8 @@ const Home = (props: HomeProps) => {
       {/* //componente de criação de post */}
       <NewPost/>
       {/* //componente para mostrar o feed de posts */}
-      {posts.map((post)=>(
-        <Post key={post.idPost} id={post.idPost} nome={'teste'} apartment={'31'} timestamp={'0000'} post={post.content}/>
+      {vizinhos.map((vizinho)=>(
+        <Post key={vizinho.id} id={vizinho.id} nome={vizinho.nome} apartment={vizinho.apartment} timestamp={vizinho.timestamp} post={vizinho.post}/>
       ))}
     </div>
   )

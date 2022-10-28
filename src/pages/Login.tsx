@@ -5,9 +5,9 @@ import { FormEvent, useState } from 'react'
 import { login } from '../services/MainApi/login'
 
 
-type LoginProps = {}
 
-const Login = (props: LoginProps) => {
+
+const Login = () => {
 
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
@@ -55,6 +55,7 @@ const Login = (props: LoginProps) => {
                     placeholder='senha'
                     value={senha}
                     onChange={(event) => setSenha(event.target.value)}
+
                   />
                 </div>
                 <div className="mb-3">
