@@ -20,7 +20,7 @@ const Login = (props: Props) => {
                   <input
                     id="email"
                     type="email"
-                    className="form-control"
+                  
                     placeholder='email'
                     // value={email}
                     // onChange={(event) => setEmail(event.target.value)}
@@ -32,7 +32,7 @@ const Login = (props: Props) => {
                   <input
                     id="password"
                     type="password"
-                    className="form-control"
+
                     placeholder='senha'
                     // value={senha}
                     // onChange={(event) => setSenha(event.target.value)}

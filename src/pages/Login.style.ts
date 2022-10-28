@@ -32,9 +32,40 @@ img{
   max-width: 171px;
 }
 
-form{
+form input{
+  border-radius: 10px;
+  border: 1px solid #919191;
+  text-align: center;
 
 }
+
+input{
+  min-width: 100%;
+  height: 2.3rem;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+button{
+  background: #76BB4C;
+	font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+  color: #000000;
+	border: none;
+	padding: 7px 120px;
+	cursor: pointer;
+	outline: none;
+  border-radius: 10px;
+}
+
+
 `
 export const Register= styled(Link)`
 text-decoration: none;
