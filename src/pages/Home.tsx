@@ -3,12 +3,25 @@ import NewPost from "../components/NewPost"
 // arquivo json só para testes:
 import faker from '../assets/faker.json'
 import Post from "../components/Post"
+import api from "../services/MainApi/config/";
+import { useEffect } from "react";
 
 type HomeProps = {}
 
 const Home = (props: HomeProps) => {
 
   const { vizinhos } = faker
+
+  async function getPosts() {
+    const dados = await api.get('/posts')
+    console.log(dados)
+  }
+
+  useEffect(() => {
+
+    getPosts()
+
+  }, [])
 
 
   return (
