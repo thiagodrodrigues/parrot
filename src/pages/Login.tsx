@@ -4,20 +4,28 @@ import logo from '../assets/logocolorido.png'
 import { FormEvent, useState } from 'react'
 import { login } from '../services/MainApi/login'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setUser } from '../store/modules/user'
 
 
 
 
 const Login = () => {
 
-  const [email, setEmail] = useState('')
-  const [senha, setSenha] = useState('')
+  const [email, setEmail] = useState<string>('')
+  const [senha, setSenha] = useState<string>('')
+  const dispatch = useDispatch()
 
   const submit = async (event: FormEvent) => {
     event.preventDefault();
     try {
       const response = await login({email, senha})
       console.log(response.data)
+      dispatch(setUser({
+          token: response.data,
+          email: email,
+        })
+      )
       alert('funcionou')
 
     } catch (error) {
