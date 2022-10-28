@@ -5,11 +5,12 @@ interface UsuarioPayload {
   email: string,
   apartment: string,
   photo: string,
-  password:string
+  password:string,
+  confirmPassword: string
 }
 
 export function cadastroUsuario(payload:UsuarioPayload) {
-  return api.post('/perfil', payload)
+  return api.post('/cadastro', payload)
 }
 
 export function listarUsuarios(token: string) {

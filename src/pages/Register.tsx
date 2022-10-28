@@ -9,6 +9,7 @@ const Register = () => {
     const [name, setName] = useState<string>('')
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
+    const [confirmPassword, setConfirmPassword] = useState<string>('')
     const [apartment, setApartment] = useState<string>('')
     const [photo, setPhoto] = useState<string>('')
 
@@ -20,13 +21,15 @@ const Register = () => {
         email,
         password,
         apartment,
-        photo
+        photo,
+        confirmPassword
       }
 
       try {
         const response = await cadastroUsuario(payload);
         if (response.status !== 201) {
           return console.log(response.status)
+
         }
 
         alert("Cadastro Efetuado com sucesso!");
@@ -79,7 +82,7 @@ const Register = () => {
                     onChange={(event) => setPassword(event.target.value)}
                   />
                 </div>
-                {/* <div className="mb-3">
+                <div className="mb-3">
                   <label htmlFor="confirmpassword" className="form-label">
                   </label>
                   <input
@@ -87,9 +90,10 @@ const Register = () => {
                     type="password"
 
                     placeholder='confirmar senha'
-
+                    value={confirmPassword}
+                    onChange={(event) => setConfirmPassword(event.target.value)}
                   />
-                </div> */}
+                </div>
                 <div className="mb-3">
                   <label htmlFor="apartment" className="form-label">
                   </label>
