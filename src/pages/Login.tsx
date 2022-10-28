@@ -20,7 +20,7 @@ const Login = (props: Props) => {
                   <input
                     id="email"
                     type="email"
-                  
+
                     placeholder='email'
                     // value={email}
                     // onChange={(event) => setEmail(event.target.value)}
