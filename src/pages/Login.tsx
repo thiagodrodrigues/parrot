@@ -3,6 +3,7 @@ import { LoginMain, BlankedBox, RegisterBtn } from './Login.style'
 import logo from '../assets/logocolorido.png'
 import { FormEvent, useState } from 'react'
 import { login } from '../services/MainApi/login'
+import { Link } from 'react-router-dom'
 
 
 
@@ -59,9 +60,11 @@ const Login = () => {
                   />
                 </div>
                 <div className="mb-3">
+                  <Link to={'/feed'}>
                   <button type="submit" className=" ">
                     entrar
                   </button>
+                  </Link>
                 </div>
               </form>
               <RegisterBtn to={'/cadastro'}>

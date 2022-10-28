@@ -2,6 +2,7 @@ import { LoginMain, BlankedBox2, RegisterBtn } from './Login.style'
 import { cadastroUsuario } from '../services/MainApi/usuarios'
 import logo from '../assets/logocolorido.png'
 import { FormEvent, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 
@@ -43,7 +44,9 @@ const Register = () => {
       <BlankedBox2 >
           <div className="container ">
             <div className="row justify-content-center text-center" >
+              <Link to={'/'}>
               <img src={logo} alt="logotipo" />
+              </Link>
               <h2>Cadastro</h2>
               <form onSubmit={cadastro}>
               <div className="mb-3">
