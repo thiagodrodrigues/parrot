@@ -1,11 +1,11 @@
 
-import { LoginMain, BlankedBox, Register } from './Login.style'
+import { LoginMain, BlankedBox, RegisterBtn } from './Login.style'
 import logo from '../assets/logocolorido.png'
-import { Link } from 'react-router-dom'
 
-type Props = {}
 
-const Login = (props: Props) => {
+type LoginProps = {}
+
+const Login = (props: LoginProps) => {
   return (
     <LoginMain className='d-flex align-items-center justify-content-center'>
       <BlankedBox >
@@ -44,9 +44,9 @@ const Login = (props: Props) => {
                   </button>
                 </div>
               </form>
-              <Register to={'/cadastro'}>
+              <RegisterBtn to={'/cadastro'}>
                <p>cadastrar-se</p>
-              </Register>
+              </RegisterBtn>
             </div>
           </div>
       </BlankedBox>
