@@ -63,6 +63,8 @@ export const UserDetail = styled.div`
     margin: 0;
   }
 
+ 
+
 `
 export const Data = styled.div`
 

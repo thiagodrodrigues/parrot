@@ -65,6 +65,17 @@ button{
   border-radius: 10px;
 }
 
+@media (max-width: 600px)
+{
+  background-color: rgba(255, 255, 255, 0.7);
+  
+  img{
+    max-width: 8rem;
+
+  }
+
+}
+
 
 `
 export const Register= styled(Link)`
