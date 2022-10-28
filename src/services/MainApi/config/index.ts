@@ -3,9 +3,12 @@ import axios from 'axios';
 
 const api = axios.create({
   // Esperar para saber o localhost
-  baseURL: 'http://localhost:3001',
+  baseURL: 'http://localhost:3000',
   headers: {
-    "Content-type": "application/json"
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Authorization",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE" ,
+    "Content-Type": "application/json;charset=UTF-8"  
   }
 });
 

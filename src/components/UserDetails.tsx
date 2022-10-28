@@ -4,7 +4,7 @@ import avatar from "../assets/avatar.png";
 type UserDetailsProps = {
   id: number,
   nome: string,
-  apartment: number,
+  apartment: string,
   email: string,
   posts: number
 }

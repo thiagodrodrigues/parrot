@@ -4,22 +4,29 @@ import NewPost from "../components/NewPost"
 import faker from '../assets/faker.json'
 import Post from "../components/Post"
 import api from "../services/MainApi/config/";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 type HomeProps = {}
 
 const Home = (props: HomeProps) => {
 
   const { vizinhos } = faker
+  const [posts, setPosts] = useState([])
 
+
+
+
+  //pegar os posts vindo do backend
   async function getPosts() {
-    const dados = await api.get('/posts')
-    console.log(dados)
+    const { data } = await api.get('/feed')
+
+    setPosts(data)
   }
 
   useEffect(() => {
 
     getPosts()
+    
 
   }, [])
 

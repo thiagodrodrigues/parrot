@@ -10,6 +10,10 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
+    path: "/feed",
+    element: <Home />,
+  },
+  {
     path: "/cadastro",
     element: <Register />,
   },

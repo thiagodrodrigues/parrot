@@ -6,7 +6,7 @@ import avatar from "../assets/avatar.png";
 type PostProps = {
   id: number,
   nome: string,
-  apartment: number,
+  apartment: string,
   timestamp: string,
   post: string
 }
