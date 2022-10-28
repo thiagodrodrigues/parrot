@@ -1,8 +1,40 @@
 import { LoginMain, BlankedBox2, RegisterBtn } from './Login.style'
+import { cadastroUsuario } from '../services/MainApi/usuarios'
 import logo from '../assets/logocolorido.png'
-type RegisterProps = {}
+import { FormEvent, useState } from 'react'
 
-const Register = (props: RegisterProps) => {
+
+
+const Register = () => {
+    const [name, setName] = useState<string>('')
+    const [email, setEmail] = useState<string>('')
+    const [password, setPassword] = useState<string>('')
+    const [apartment, setApartment] = useState<string>('')
+    const [photo, setPhoto] = useState<string>('')
+
+    const cadastro = async (event: FormEvent) =>{
+      event.preventDefault()
+
+      const payload = {
+        name,
+        email,
+        password,
+        apartment,
+        photo
+      }
+
+      try {
+        const response = await cadastroUsuario(payload);
+        if (response.status !== 201) {
+          return console.log(response.status)
+        }
+
+        alert("Cadastro Efetuado com sucesso!");
+      } catch (error) {
+        alert("Deu Algo errado");
+      }
+    }
+
   return (
     <LoginMain className='d-flex align-items-center justify-content-center'>
       <BlankedBox2 >
@@ -10,7 +42,7 @@ const Register = (props: RegisterProps) => {
             <div className="row justify-content-center text-center" >
               <img src={logo} alt="logotipo" />
               <h2>Cadastro</h2>
-              <form >
+              <form onSubmit={cadastro}>
               <div className="mb-3">
                   <label htmlFor="name" className="form-label">
                   </label>
@@ -19,8 +51,8 @@ const Register = (props: RegisterProps) => {
                     type="text"
 
                     placeholder='nome'
-                    // value={email}
-                    // onChange={(event) => setEmail(event.target.value)}
+                    value={name}
+                    onChange={(event) => setName(event.target.value)}
                   />
                 </div>
                 <div className="mb-3">
@@ -31,8 +63,8 @@ const Register = (props: RegisterProps) => {
                     type="email"
 
                     placeholder='email'
-                    // value={email}
-                    // onChange={(event) => setEmail(event.target.value)}
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
                   />
                 </div>
                 <div className="mb-3">
@@ -43,11 +75,11 @@ const Register = (props: RegisterProps) => {
                     type="password"
 
                     placeholder='senha'
-                    // value={senha}
-                    // onChange={(event) => setSenha(event.target.value)}
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
                   />
                 </div>
-                <div className="mb-3">
+                {/* <div className="mb-3">
                   <label htmlFor="confirmpassword" className="form-label">
                   </label>
                   <input
@@ -55,8 +87,9 @@ const Register = (props: RegisterProps) => {
                     type="password"
 
                     placeholder='confirmar senha'
+
                   />
-                </div>
+                </div> */}
                 <div className="mb-3">
                   <label htmlFor="apartment" className="form-label">
                   </label>
@@ -65,6 +98,8 @@ const Register = (props: RegisterProps) => {
                     type="text"
 
                     placeholder='unidade/apartamento'
+                    value={apartment}
+                    onChange={(event) => setApartment(event.target.value)}
                   />
                 </div>
                 <div className="mb-3">
@@ -75,8 +110,8 @@ const Register = (props: RegisterProps) => {
                     type="text"
 
                     placeholder='link da foto'
-                    // value={email}
-                    // onChange={(event) => setEmail(event.target.value)}
+                    value={photo}
+                    onChange={(event) => setPhoto(event.target.value)}
                   />
                 </div>
                 <div className="mb-3">

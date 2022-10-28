@@ -4,22 +4,35 @@ import NewPost from "../components/NewPost"
 import faker from '../assets/faker.json'
 import Post from "../components/Post"
 import api from "../services/MainApi/config/";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 type HomeProps = {}
 
 const Home = (props: HomeProps) => {
 
   const { vizinhos } = faker
+  const [posts, setPosts] = useState([])
+  const [users, setUsers] = useState([])
+  const [teste, setTeste] = useState([])
 
+  //pegar os usuarios vindo do backend
+  async function getUsers() {
+    const { data } = await api.get('/perfil')
+
+    setUsers(data)
+  }
+
+  //pegar os posts vindo do backend
   async function getPosts() {
-    const dados = await api.get('/posts')
-    console.log(dados)
+    const { data } = await api.get('/feed')
+
+    setPosts(data)
   }
 
   useEffect(() => {
 
     getPosts()
+    getUsers()
 
   }, [])
 
@@ -31,8 +44,8 @@ const Home = (props: HomeProps) => {
       {/* //componente de criação de post */}
       <NewPost/>
       {/* //componente para mostrar o feed de posts */}
-      {vizinhos.map((vizinho)=>(
-        <Post key={vizinho.id} id={vizinho.id} nome={vizinho.nome} apartment={vizinho.apartment} timestamp={vizinho.timestamp} post={vizinho.post}/>
+      {posts.map((post)=>(
+        <Post key={post.idPost} id={post.idPost} nome={'teste'} apartment={'31'} timestamp={'0000'} post={post.content}/>
       ))}
     </div>
   )
